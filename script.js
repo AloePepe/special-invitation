@@ -1308,7 +1308,7 @@ document
 
 
         finalText.innerHTML =
-    "Я все сделаю :)";
+            "Я все сделаю :)";
 
 
 
@@ -1334,6 +1334,99 @@ document
 
 });
 
+
+
+
+
+// ==============================
+// CUSTOM IDEA
+// ==============================
+
+
+customIdeaButton.addEventListener("click",()=>{
+
+
+    const value =
+        customIdeaInput.value.trim();
+
+
+
+    if(!value){
+
+
+        customIdeaButton.classList.remove(
+            "error"
+        );
+
+
+        void customIdeaButton.offsetWidth;
+
+
+        customIdeaButton.classList.add(
+            "error"
+        );
+
+
+        customIdeaInput.focus();
+
+
+        setTimeout(()=>{
+
+
+            customIdeaButton.classList.remove(
+                "error"
+            );
+
+
+        },500);
+
+
+        return;
+
+    }
+
+
+
+    fetch("https://flatfoot-constable-eleven.ngrok-free.dev/send-idea", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+
+            idea: value
+
+        })
+
+    });
+
+
+
+    finalText.innerHTML =
+        "Я все сделаю :)";
+
+
+
+    hideElement(customIdeaScreen);
+
+
+
+    setTimeout(()=>{
+
+
+        showScreen(finalScreen);
+
+
+        currentScreen="final";
+
+
+    },400);
+
+
+});
 
 
 
