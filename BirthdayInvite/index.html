@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Special Invitation</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <div id="screen">
+
+        <div id="navBar">
+
+    <button id="backButton" class="navButton hidden">
+    ‹
+    </button>
+
+</div>
+
+        <h1 id="title">
+            СИСТЕМНАЯ ОШИБКА
+        </h1>
+
+
+        <p id="status">
+            Идет идентификация пользователя...
+        </p>
+
+
+        <div class="progress" id="progressContainer">
+
+            <div id="bar"></div>
+
+        </div>
+
+
+
+
+        <!-- Идентификация -->
+
+
+        <div id="identityBlock" class="hidden">
+
+
+            <h1 id="identityTitle">
+                ПОЛЬЗОВАТЕЛЬ ИДЕНТИФИЦИРОВАН
+            </h1>
+
+
+            <p class="personName">
+                Пашкевич Ольга Владимировна
+            </p>
+
+
+            <p class="birthDate">
+                28.07.2004 г.р.
+            </p>
+
+
+        </div>
+
+
+
+
+        <div class="buttonContainer">
+
+
+            <button id="nextButton" style="display:none;">
+                ДА Я
+            </button>
+
+
+        </div>
+
+
+
+
+
+
+
+<!-- Приглашение -->
+
+
+<div id="envelopeScreen" class="hidden">
+
+
+    <div id="invitation">
+
+
+        <!-- сообщения от кнопки НЕТ -->
+
+        <p id="systemMessage"></p>
+
+
+
+        <div class="heart">
+            ♥
+        </div>
+
+
+
+        <p class="invitationText">
+            Оля, пойдешь со мной
+            <br>
+             на свидание? &lt;3
+        </p>
+
+
+
+
+
+        <div class="choiceButtons">
+
+
+            <button id="yesButton">
+                ДА
+            </button>
+
+
+            <button id="noButton">
+                НЕТ
+            </button>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+        <!-- Выбор даты и времени -->
+
+
+        <div id="dateScreen" class="hidden">
+
+
+            <h1 class="dateTitle">
+                Знал, что ты не откажешься)
+            </h1>
+
+
+            <p class="dateSubtitle">
+                Выбирай дату и время нашей встречи!
+            </p>
+
+
+
+
+
+            <!-- ДАТА -->
+
+
+            <div class="dateWrapper">
+
+
+                <div class="selectCard" id="dateButton">
+
+
+                    <div class="cardIcon">
+                        📅
+                    </div>
+
+
+                    <div id="dateText">
+                        Выбрать дату
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div id="calendar" class="hidden">
+
+
+                    <div class="calendarHeader">
+
+
+                        <button id="prevMonth" class="monthArrow">
+                            ‹
+                        </button>
+
+
+                        <div id="monthName">
+                            Июль
+                        </div>
+
+
+                        <button id="nextMonth" class="monthArrow">
+                            ›
+                        </button>
+
+
+                    </div>
+
+
+
+
+                    <div class="weekDays">
+
+
+                        <span>Пн</span>
+                        <span>Вт</span>
+                        <span>Ср</span>
+                        <span>Чт</span>
+                        <span>Пт</span>
+                        <span>Сб</span>
+                        <span>Вс</span>
+
+
+                    </div>
+
+
+
+
+                    <div class="calendarGrid" id="calendarGrid"></div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- ВРЕМЯ -->
+
+
+            <div class="timeWrapper">
+
+
+                <div class="selectCard" id="timeButton">
+
+
+                    <div class="cardIcon">
+                        🕒
+                    </div>
+
+
+                    <div id="timeText">
+                        Выбрать время
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <div id="timePicker" class="hidden">
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <button id="confirmButton" disabled>
+
+                ВЫБРАТЬ ❤️
+
+            </button>
+
+
+            <p id="errorMessage"></p>
+
+
+
+        </div>
+
+
+
+
+
+
+
+<!-- ИДЕИ -->
+
+
+<div id="ideasScreen" class="hidden">
+
+
+    <h1 class="ideasTitle">
+        Идеи?:)
+    </h1>
+
+
+
+    <div class="ideasGrid">
+
+
+
+        <button class="ideaCard">
+
+            🌳
+            <br>
+
+            Погулять
+
+        </button>
+
+
+
+        <button class="ideaCard">
+
+            🍕
+            <br>
+
+            Покушать
+
+        </button>
+
+
+
+        <button class="ideaCard">
+
+            🎬
+            <br>
+
+            Посмотреть
+
+        </button>
+
+
+
+        <button class="ideaCard adultCard">
+
+            ❓
+            <br>
+
+            18+
+
+        </button>
+
+
+
+        <button class="ideaCard customCard">
+
+            💭
+            <br>
+
+            Свой вариант
+
+        </button>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- СВОЙ ВАРИАНТ -->
+
+
+<div id="customIdeaScreen" class="hidden">
+
+
+    <h1 class="customTitle">
+        Напиши свой вариант :)
+    </h1>
+
+
+
+    <p class="customSubtitle">
+        Или расскажи, чего бы тебе хотелось
+    </p>
+
+
+
+    <textarea
+        id="customIdeaInput"
+        maxlength="180"
+        placeholder="Напиши здесь свою идею..."
+    ></textarea>
+
+
+
+    <button id="customIdeaButton">
+        ОТПРАВИТЬ ❤️
+    </button>
+
+
+</div>
+
+
+
+
+
+<!-- ФИНАЛ -->
+
+
+<div id="finalScreen" class="hidden">
+
+
+    <p class="finalText" id="finalText">
+        Отлично ❤️
+        <br>
+        Отлично, я все сделаю :)
+    </p>
+
+
+</div>
+
+
+
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<script src="js/script.js"></script>
+
+<div id="heartExplosion"></div>
+
+</body>
